@@ -49,6 +49,8 @@ pip install gevent
 ######(有时候使用的gevent版本过低会出现自动退出情况，请使用pip install gevent --upgrade更新)
 ## 如何使用
 
+### 本地使用
+
 将项目目录clone到当前文件夹
 
 $ git clone 
@@ -63,6 +65,18 @@ $ cd IPProxys
 
 ```
 python IPProxys.py
+```
+
+### 使用docker容器
+
+$ git clone 
+
+切换工程目录
+
+```
+$ cd IPProxys
+$ docker build -t ipproxy .
+$ docker run --name ipProxyPool -d -p 8080:8080 ipproxy
 ```
 
 ## API 使用方法
